@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dart Öğrenme Projesi - Web Arayüzü</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fab fa-dart-lang"></i>
+                    <h1>Dart Öğrenme Projesi</h1>
+                </div>
+                <p class="subtitle">Dart programlama dilini interaktif olarak öğrenin</p>
+            </div>
+        </header>
+
+        <nav class="navigation">
+            <button class="nav-btn active" data-section="variables">
+                <i class="fas fa-code"></i>
+                Değişkenler
+            </button>
+            <button class="nav-btn" data-section="calculations">
+                <i class="fas fa-calculator"></i>
+                Hesaplamalar
+            </button>
+            <button class="nav-btn" data-section="classes">
+                <i class="fas fa-cube"></i>
+                Sınıflar
+            </button>
+            <button class="nav-btn" data-section="lists">
+                <i class="fas fa-list"></i>
+                Listeler
+            </button>
+            <button class="nav-btn" data-section="conditions">
+                <i class="fas fa-route"></i>
+                Koşullar
+            </button>
+            <button class="nav-btn" data-section="all">
+                <i class="fas fa-play"></i>
+                Tümünü Çalıştır
+            </button>
+        </nav>
+
+        <main class="main-content">
+            <!-- Değişkenler Bölümü -->
+            <section class="content-section active" id="variables">
+                <div class="section-header">
+                    <h2><i class="fas fa-code"></i> Değişkenler ve Veri Tipleri</h2>
+                    <button class="run-btn" onclick="runVariablesExample()">
+                        <i class="fas fa-play"></i> Çalıştır
+                    </button>
+                </div>
+                
+                <div class="code-input">
+                    <h3>Kodu Düzenle:</h3>
+                    <div class="input-group">
+                        <label>İsim:</label>
+                        <input type="text" id="name-input" value="Ahmet" placeholder="İsminizi girin">
+                    </div>
+                    <div class="input-group">
+                        <label>Soyisim:</label>
+                        <input type="text" id="surname-input" value="Yılmaz" placeholder="Soyisminizi girin">
+                    </div>
+                    <div class="input-group">
+                        <label>Yaş:</label>
+                        <input type="number" id="age-input" value="25" min="1" max="120">
+                    </div>
+                    <div class="input-group">
+                        <label>Boy (m):</label>
+                        <input type="number" id="height-input" value="1.75" step="0.01" min="0.5" max="3">
+                    </div>
+                    <div class="input-group">
+                        <label>Öğrenci mi?</label>
+                        <select id="student-input">
+                            <option value="true">Evet</option>
+                            <option value="false">Hayır</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="output" id="variables-output">
+                    <h3>Çıktı:</h3>
+                    <div class="output-content"></div>
+                </div>
+            </section>
+
+            <!-- Hesaplamalar Bölümü -->
+            <section class="content-section" id="calculations">
+                <div class="section-header">
+                    <h2><i class="fas fa-calculator"></i> Matematik İşlemleri</h2>
+                    <button class="run-btn" onclick="runCalculationsExample()">
+                        <i class="fas fa-play"></i> Çalıştır
+                    </button>
+                </div>
+                
+                <div class="code-input">
+                    <h3>Sayıları Girin:</h3>
+                    <div class="input-group">
+                        <label>Birinci Sayı:</label>
+                        <input type="number" id="num1-input" value="15">
+                    </div>
+                    <div class="input-group">
+                        <label>İkinci Sayı:</label>
+                        <input type="number" id="num2-input" value="7">
+                    </div>
+                </div>
+
+                <div class="output" id="calculations-output">
+                    <h3>Hesaplama Sonuçları:</h3>
+                    <div class="output-content"></div>
+                </div>
+            </section>
+
+            <!-- Sınıflar Bölümü -->
+            <section class="content-section" id="classes">
+                <div class="section-header">
+                    <h2><i class="fas fa-cube"></i> Sınıf ve Nesne Örnekleri</h2>
+                    <button class="run-btn" onclick="runClassesExample()">
+                        <i class="fas fa-play"></i> Çalıştır
+                    </button>
+                </div>
+                
+                <div class="code-input">
+                    <h3>Kişi Bilgileri:</h3>
+                    <div class="person-inputs">
+                        <div class="person-group">
+                            <h4>Kişi 1:</h4>
+                            <input type="text" id="person1-name" value="Ayşe" placeholder="İsim">
+                            <input type="text" id="person1-surname" value="Demir" placeholder="Soyisim">
+                            <input type="number" id="person1-age" value="30" min="1" max="120" placeholder="Yaş">
+                        </div>
+                        <div class="person-group">
+                            <h4>Kişi 2:</h4>
+                            <input type="text" id="person2-name" value="Mehmet" placeholder="İsim">
+                            <input type="text" id="person2-surname" value="Kaya" placeholder="Soyisim">
+                            <input type="number" id="person2-age" value="22" min="1" max="120" placeholder="Yaş">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="output" id="classes-output">
+                    <h3>Kişi Bilgileri:</h3>
+                    <div class="output-content"></div>
+                </div>
+            </section>
+
+            <!-- Listeler Bölümü -->
+            <section class="content-section" id="lists">
+                <div class="section-header">
+                    <h2><i class="fas fa-list"></i> Liste İşlemleri</h2>
+                    <button class="run-btn" onclick="runListsExample()">
+                        <i class="fas fa-play"></i> Çalıştır
+                    </button>
+                </div>
+                
+                <div class="code-input">
+                    <h3>Liste Düzenle:</h3>
+                    <div class="input-group">
+                        <label>Meyveler (virgülle ayırın):</label>
+                        <input type="text" id="fruits-input" value="elma, armut, muz, çilek, üzüm" placeholder="elma, armut, muz">
+                    </div>
+                    <div class="input-group">
+                        <label>Sayılar (virgülle ayırın):</label>
+                        <input type="text" id="numbers-input" value="5, 12, 8, 23, 1, 67, 34" placeholder="1, 2, 3, 4, 5">
+                    </div>
+                </div>
+
+                <div class="output" id="lists-output">
+                    <h3>Liste İşlemleri:</h3>
+                    <div class="output-content"></div>
+                </div>
+            </section>
+
+            <!-- Koşullar Bölümü -->
+            <section class="content-section" id="conditions">
+                <div class="section-header">
+                    <h2><i class="fas fa-route"></i> Koşullu İfadeler</h2>
+                    <button class="run-btn" onclick="runConditionsExample()">
+                        <i class="fas fa-play"></i> Çalıştır
+                    </button>
+                </div>
+                
+                <div class="code-input">
+                    <h3>Değerleri Girin:</h3>
+                    <div class="input-group">
+                        <label>Not (0-100):</label>
+                        <input type="number" id="grade-input" value="85" min="0" max="100">
+                    </div>
+                    <div class="input-group">
+                        <label>Hava Durumu:</label>
+                        <select id="weather-input">
+                            <option value="güneşli">Güneşli</option>
+                            <option value="yağmurlu">Yağmurlu</option>
+                            <option value="karlı">Karlı</option>
+                            <option value="bulutlu">Bulutlu</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="output" id="conditions-output">
+                    <h3>Koşul Sonuçları:</h3>
+                    <div class="output-content"></div>
+                </div>
+            </section>
+
+            <!-- Tümü Bölümü -->
+            <section class="content-section" id="all">
+                <div class="section-header">
+                    <h2><i class="fas fa-play"></i> Tüm Örnekleri Çalıştır</h2>
+                    <button class="run-btn" onclick="runAllExamples()">
+                        <i class="fas fa-play"></i> Tümünü Çalıştır
+                    </button>
+                </div>
+                
+                <div class="output full-output" id="all-output">
+                    <h3>Dart Öğrenme Projesi - Tüm Sonuçlar:</h3>
+                    <div class="output-content"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Dart Öğrenme Projesi - Interaktif Web Arayüzü</p>
+        </footer>
+    </div>
+
+    <script src="dart-functions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
