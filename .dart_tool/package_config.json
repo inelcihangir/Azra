@@ -1,0 +1,17 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "dart_baslangic_projesi",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    }
+  ],
+  "generated": "2025-07-08T08:42:02.277210Z",
+  "generator": "pub",
+  "generatorVersion": "3.5.4",
+  "flutterRoot": "file:///C:/Users/inelc/flutter",
+  "flutterVersion": "3.24.5",
+  "pubCache": "file:///C:/Users/inelc/AppData/Local/Pub/Cache"
+}

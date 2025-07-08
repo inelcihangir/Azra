@@ -1,0 +1,12 @@
+name: dart_baslangic_projesi
+description: Dart dilini öğrenmek için başlangıç seviye proje
+version: 1.0.0
+
+environment:
+  sdk: '>=2.17.0 <4.0.0'
+
+dependencies:
+  # Şu an için herhangi bir bağımlılık yok
+
+dev_dependencies:
+  # Geliştirme araçları burada olacak
